@@ -1,0 +1,67 @@
+:root {
+    --neutral-color: pink;
+    --font: "Oswald", sans-serif;
+    --primary-color: rgb(109, 109, 230);
+    --secondary-color: #6f00ff;
+    --light-color: #fff;
+    --dark-color: rgb(77, 0, 202);
+    --highlight: 1px 1px 2px var(--light-color);
+}
+body {
+    font-family: var(--font);
+    background: var(--neutral-color);
+    color: var(--light-color)
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.item {
+    background: var(--primary-color);
+    min-height: 200px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: var(--highlight), 5px 5px 5px var(--dark-color);
+    transition: all 2s ease-in-out;
+}
+.item:hover {
+    box-shadow: 10px 10px 70px var(--dark-color)
+    inset;
+    background: var(--secondary-color);
+}
+.round {
+    margin: 50px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+    box-shadow: 0 4px 10px var(--dark-color), 0 0 6px var(--dark-color) inset;
+    transition: height 3s ease-in 1s, width 3s ease-out, text-shadow 2s, font-size 2s;
+}
+.round:hover {
+    height: 250px;
+    width: 250px;
+    text-shadow: 2px 2px 2px var(--dark-color);
+    font-size: 2rem;
+}
+.square{
+    margin: 50px auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+    border-bottom: 2px solid black;
+    transition: transform 5s, border-radius 4s;
+}
+.square:hover {
+    transform: rotate(180deg);
+    background: var(--primary-color);
+}
